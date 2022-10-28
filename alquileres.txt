@@ -1,0 +1,17 @@
+create table locadora(locadora_id int, Nombre_locadora varchar(255), apellido_locadora varchar(255), DNI_locadora char(255), Dirección_locadora varchar (255), Nocelular_locadora nchar(255), Ciudad_locadora varchar(255), cuil_locadora char(255), cuenta_bancaria_locadora char(255), email_locadora varchar (255));
+create table propiedades (propiedades_id int, tipo_propiedad varchar(255), Dirección_propiedad varchar(255), localidad_propiedad varchar(255), provincia_propiedad varchar(255), cp_propiedad char(255));
+create table seguros (seguros_id int, propiedades_id int, compañía_seguros varchar(255), No_poliza char (255), monto_poliza char (255),Fvto_poliza date),
+create table asesores (asesores_id int, nombre_asesor varchar(255), apellido_asesor varchar (255), profesión_asesor varchar (255), dirección_asesor varchar (255), Nocelular_asesor char (255), matrícula_asesor varchar (255));
+create table impuestos y servicios (impuesto_servicio_id int, propiedades_id int, monto_impyserv char(255), Fvto_impyserv date);
+create table formas de pago (forma_de_pago_id int, desc_formas_de_pago varchar (255)));
+create table garantes (garante_id int, locador_id int, propiedades_id int, nombre_garante varchar (255), Apellido_garante varchar (255), Nocelular_garante char(255), dirección_garante varchar(255), ciudad_garante varchar (255), cp_garante char (255), país_garante varchar (255));
+create table locador (locador_id int, propiedades_id int, nombre_locador varchar(255), apellido_garante varchar (255), dni_locador char (255), cuil_locador char (255), Nocelular_locador char (255), email_locador varchar (255));
+create table proveedores (proveedores_id int, Nombre_fantasía_proveedor varchar (255), dirección_proveedor varchar(255), cuit_proveedor varchar (255));
+create table facturas (factura_id int, No_factura char (255), Fecha_factura date, proveedor_id int, tipo_factura varchar (255), desc_factura varchar (255), monto_factura char(255));
+create table señas (señas_id int, Fecha_seña date, monto_seña char(255), locador_id int, propiedades_id int, Norecibo char (255));
+create table contratos (contratos_id int, Nocontrato char (255), locador_id int, propiedad_id int, locadora_id, fecha_contrato date, Fecha_inicio date, Fecha_final date, monto_alquiler char (255));
+create table novedades (novedades_id int, Fecha_novedades date, Descripción_novedades varchar(255), locador_id int, propiedades_id int);
+create table recisión de contratos (recisión_contratos_id int, locador_id int, propiedades_id int, locadora_id int, fecha_recisióncontrato date, Acta_recisión varchar (255));
+create table compras (compras_id int, proveedor_id int, propiedades_id int, fecha_compra date, monto_compra char (255)));
+
+create table recibos (recibos_id int, Norecibo_char(255), Fecha_pago date, locador_id int, propiedades_id int,monto_total_alquiler char (255), impuesto_servicio_id int, seguro_id int);
